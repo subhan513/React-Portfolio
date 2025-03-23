@@ -1,0 +1,98 @@
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ff8a00;
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  -webkit-background-clip: text;
+
+  letter-spacing: 1.5px;
+  transition: transform 0.3s ease;
+}
+.skills{
+   display: flex;
+   color:orange;
+   border-radius: 50%;
+   height: 50px;
+   font-size: 25px;
+   width: 50px;
+   gap: 20px;
+ list-style-type: none;
+}
+.description{
+ color: #6e57e0
+}
+
+.title:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 20px rgba(255, 138, 0, 0.7);
+}
+
+/* Container Styling */
+.container {
+  flex: 1 1 calc(50% - 20px);
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #576cbc 0%, #132a53 100%);
+  box-shadow: 0 16px 14px 0 #04152d;
+  padding: 18px 24px;
+  box-sizing: border-box;
+  max-width: 1200px;
+  height: 600px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(255, 138, 0, 0.7); /* Blur Shadow on Hover */
+}
+
+/* Image Styling */
+.image {
+  width: 100%;
+  margin-bottom: 26px;
+  height: 700px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  transition: transform 0.3s ease;
+}
+
+.container:hover .image {
+  transform: scale(1.05);
+}
+
+/* Button Styling */
+.link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 100px;
+  background: linear-gradient(90deg, #6e57e0, #4a90e2);
+  padding: 10px 20px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  margin: 10px 5px;
+}
+
+/* Button Hover Effect */
+.link:hover {
+  background: linear-gradient(90deg, #e52e71, #ff8a00);
+  box-shadow: 0 0 15px rgba(229, 46, 113, 0.7);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    height: auto;
+    flex: 1 1 100%;
+  }
+  .image {
+    height: 300px;
+  }
+  .link {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}

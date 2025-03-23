@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Real Time Movie Application",
+    "imageSrc": "projects/project1.png",
+    "description": "This is a full Stack project made to learn the latest languages by building an app.",
+    "skills": ["React","Appwrite","TailwindCSS"],
+    "demo": "https://movie-application-git-main-subhan513s-projects.vercel.app/",
+    "source": "https://github.com/subhan513/Movie-Application"
+  },
+  {
+    "title": "Our School  Mega Project",
+    "imageSrc": "projects/project2.png",
+    "description": "This is a project made to learn the latest languages by building an app.",
+    "skills": ["Nextjs", "TailwindCSS", "VanillaJs"],
+    "demo": "https://sharifeducaitonalcomplex.vercel.app/",
+    "source": "https://github.com/subhan513/Sharif-Complex"
+  },
+  {
+    "title": "The Snake Quest",
+    "imageSrc": "projects/project4.png",
+    "description": "This is a project made to learn the latest languages by building an app.",
+    "skills": ["html", "CSS", "JS"],
+    "demo": "https://snake-game-ebon-seven.vercel.app/",
+    "source": "https://github.com/subhan513/SnakeGame"
+  },
+  {
+    "title": "Event-Bubbler",
+    "imageSrc": "projects/project5.png",
+    "description": "This is a project made to learn the latest languages by building an app.",
+    "skills": ["html", "Css", "Js"],
+    "demo": "https://www.example.com",
+    "source": "https://www.github.com"
+  }
+]

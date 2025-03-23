@@ -1,0 +1,30 @@
+@import "../../vars.css";
+
+.container {
+  margin-top: 50px;
+  color: var(--color-text);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 35px;
+  font-weight: 700;
+  font-family: 'Courier New', Courier, monospace;
+  
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.projects {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
