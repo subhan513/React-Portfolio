@@ -26,7 +26,7 @@ export const Navbar = () => {
     <nav className={styles.navbar}>
       {/* Logo and Title */}
       <a className={styles.title} href="/">
-        🚀 Subhan's Portfolio
+       Subhan's Portfolio
       </a>
 
       {/* Menu Button for Mobile */}
