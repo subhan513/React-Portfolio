@@ -6,6 +6,7 @@ export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("about");
 
+  // Scroll effect to track section visibility
   const handleScroll = () => {
     const sections = ["about", "experience", "projects", "contact"];
     sections.forEach((section) => {
@@ -26,7 +27,9 @@ export const Navbar = () => {
       <a className={styles.title} href="/">
         Subhan's Portfolio
       </a>
+
       <div className={styles.menu}>
+        {/* Menu Button */}
         <img
           className={styles.menuBtn}
           src={
@@ -37,14 +40,16 @@ export const Navbar = () => {
           alt="menu-button"
           onClick={() => setMenuOpen(!menuOpen)}
         />
+
+        {/* Menu Items */}
         <ul
           className={`${styles.menuItems} ${menuOpen && styles.menuOpen}`}
           onClick={() => setMenuOpen(false)}
         >
-          {['about', 'experience', 'projects', 'contact'].map((item) => (
+          {["about", "experience", "projects", "contact"].map((item) => (
             <li key={item}>
-              <a 
-                href={`#${item}`} 
+              <a
+                href={`#${item}`}
                 className={activeSection === item ? styles.activeLink : ""}
               >
                 {item.charAt(0).toUpperCase() + item.slice(1)}
