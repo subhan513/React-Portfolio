@@ -1,9 +1,19 @@
 import React from "react";
-
 import styles from "./Hero.module.css";
 import { getImageUrl } from "../../utils";
 
 export const Hero = () => {
+  // Smooth scroll function
+  const handleScrollToContact = (e) => {
+    e.preventDefault();
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <section className={styles.container}>
       <div className={styles.content}>
@@ -11,7 +21,8 @@ export const Hero = () => {
         <p className={styles.description}>
           I'm a full-stack developer with 1 year of experience using React and NodeJS. Reach out if you'd like to learn more!
         </p>
-        <a href="/contact" className={styles.contactBtn}>
+        {/* Smooth scroll button */}
+        <a href="#contact" className={styles.contactBtn} onClick={handleScrollToContact}>
           Contact Me
         </a>
       </div>
