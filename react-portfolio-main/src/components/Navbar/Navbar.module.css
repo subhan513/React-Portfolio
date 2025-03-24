@@ -40,7 +40,8 @@
 }
 .navbar {
   font-family: 'Poppins', sans-serif;
-  
+  position: sticky;
+  top: 0%;
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   transition: all 0.4s ease-in-out;
