@@ -11,7 +11,7 @@ export const Hero = () => {
         <p className={styles.description}>
           I'm a full-stack developer with 1 year of experience using React and NodeJS. Reach out if you'd like to learn more!
         </p>
-        <a href="http://localhost:5173/#contact" className={styles.contactBtn}>
+        <a href="https://react-portfolio-nu-rust-58.vercel.app/#contact" className={styles.contactBtn}>
           Contact Me
         </a>
       </div>
