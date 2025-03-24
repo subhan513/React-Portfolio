@@ -1,51 +1,19 @@
-@import "../../vars.css";
-
 .navbar {
-  position: relative;
+  position: sticky; /* Stick to top on scroll */
+  top: 0; /* Ensure it stays at the very top */
+  z-index: 10; /* Ensure it stays above content */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 61px;
-  z-index: 2;
-  margin: 0 10%;
-}
-
-.title {
-  font-size: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  color: var(--color-text);
-}
-
-
-.menuBtn {
-  display: none;
-}
-
-.menu {
-  display: flex;
-}
-
-.menuItems {
-  display: flex;
-  gap: 47px;
-  list-style: none;
-}
-
-.menuItems a {
-  font-size: 25px;
-  color: var(--color-text);
-  text-decoration: none;
-}
-.navbar {
-  font-family: 'Poppins', sans-serif;
-  position: sticky;
-  top: 0%;
+  padding: 20px 10%;
+  font-family: "Poppins", sans-serif;
   backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.7); /* Slight dark transparent background */
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   transition: all 0.4s ease-in-out;
 }
 
+/* Title Styling */
 .title {
   font-size: 2rem;
   font-weight: 600;
@@ -57,8 +25,10 @@
   transform: scale(1.1);
 }
 
+/* Menu Button (for mobile) */
 .menuBtn {
   cursor: pointer;
+  display: none;
   transition: transform 0.3s ease;
 }
 
@@ -66,13 +36,26 @@
   transform: rotate(180deg);
 }
 
+/* Menu Items Styling */
+.menu {
+  display: flex;
+}
+
+.menuItems {
+  display: flex;
+  gap: 47px;
+  list-style: none;
+}
+
 .menuItems li a {
   font-size: 1.2rem;
   color: #ddd;
   position: relative;
+  text-decoration: none;
   transition: color 0.3s ease-in-out;
 }
 
+/* Hover underline effect */
 .menuItems li a::after {
   content: "";
   position: absolute;
@@ -80,7 +63,7 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.3s ease-in-out;
@@ -91,16 +74,18 @@
   transform-origin: left;
 }
 
+/* Active Link Style */
 .activeLink {
-  color: #4CAF50;
+  color: #4caf50;
   font-weight: bold;
 }
 
-
+/* Responsive Navbar (Mobile View) */
 @media screen and (max-width: 830px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
+    padding-top: 20px;
   }
 
   .menu {
@@ -115,7 +100,6 @@
 
   .menuBtn {
     display: block;
-    cursor: pointer;
   }
 
   .menuItems {
