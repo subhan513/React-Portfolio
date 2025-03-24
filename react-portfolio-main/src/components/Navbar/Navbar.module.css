@@ -1,17 +1,35 @@
 .navbar {
-  position: sticky; /* Stick to top on scroll */
-  top: 0; /* Ensure it stays at the very top */
-  z-index: 10; /* Ensure it stays above content */
+  position: sticky;
+  top: 0; /* Ensure it sticks to the top */
+  z-index: 10; /* Stay above everything */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 10%;
+  padding: 10px 10%; /* Reduced padding */
   font-family: "Poppins", sans-serif;
   backdrop-filter: blur(10px);
-  background: rgba(0, 0, 0, 0.7); /* Slight dark transparent background */
+  background: rgba(0, 0, 0, 0.7);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   transition: all 0.4s ease-in-out;
+  width: 100%; /* Ensures full width */
 }
+
+/* Remove extra margin */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Example content to enable scrolling */
+.content {
+  height: 2000px; /* Just to test scrolling */
+  padding: 20px;
+  font-size: 18px;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+}
+
 
 /* Title Styling */
 .title {
