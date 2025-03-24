@@ -24,12 +24,13 @@ export const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
+      {/* Logo and Title */}
       <a className={styles.title} href="/">
-        Subhan's Portfolio
+        🚀 Subhan's Portfolio
       </a>
 
+      {/* Menu Button for Mobile */}
       <div className={styles.menu}>
-        {/* Menu Button */}
         <img
           className={styles.menuBtn}
           src={
@@ -46,13 +47,21 @@ export const Navbar = () => {
           className={`${styles.menuItems} ${menuOpen && styles.menuOpen}`}
           onClick={() => setMenuOpen(false)}
         >
-          {["about", "experience", "projects", "contact"].map((item) => (
-            <li key={item}>
+          {[
+            { id: "about", icon: "👨‍💻", label: "About" },
+            { id: "experience", icon: "💼", label: "Experience" },
+            { id: "projects", icon: "📁", label: "Projects" },
+            { id: "contact", icon: "📬", label: "Contact" },
+          ].map((item) => (
+            <li key={item.id}>
               <a
-                href={`#${item}`}
-                className={activeSection === item ? styles.activeLink : ""}
+                href={`#${item.id}`}
+                className={
+                  activeSection === item.id ? styles.activeLink : ""
+                }
               >
-                {item.charAt(0).toUpperCase() + item.slice(1)}
+                <span className={styles.menuIcon}>{item.icon}</span>
+                {item.label}
               </a>
             </li>
           ))}

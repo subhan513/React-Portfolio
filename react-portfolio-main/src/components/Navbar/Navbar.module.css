@@ -10,8 +10,7 @@
   padding: 10px 10%; /* Adjusted padding */
   font-family: "Poppins", sans-serif;
   backdrop-filter: blur(10px);
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
   transition: all 0.4s ease-in-out;
   width: 100%; /* Ensure full width */
 }
@@ -20,13 +19,14 @@
 .title {
   font-size: 2rem;
   font-weight: 600;
-  color: #fff;
+  color: #f3f4f6;
   transition: transform 0.3s ease;
   text-decoration: none;
 }
 
 .title:hover {
   transform: scale(1.1);
+  color: #ffdd57;
 }
 
 /* Menu button */
@@ -53,7 +53,7 @@
 
 .menuItems li a {
   font-size: 1.2rem;
-  color: #ddd;
+  color: #f3f4f6;
   position: relative;
   transition: color 0.3s ease-in-out;
   text-decoration: none;
@@ -67,10 +67,14 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #4CAF50;
+  background-color: #ffdd57;
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.3s ease-in-out;
+}
+
+.menuItems li a:hover {
+  color: #ffdd57;
 }
 
 .menuItems li a:hover::after {
@@ -80,7 +84,7 @@
 
 /* Active link styling */
 .activeLink {
-  color: #4CAF50;
+  color: #ffdd57;
   font-weight: bold;
 }
 
@@ -111,12 +115,7 @@
     align-items: center;
     gap: 13px;
     border-radius: 10px;
-    background: rgb(25, 55, 109);
-    background: linear-gradient(
-      0deg,
-      rgba(25, 55, 109, 0.2) 0%,
-      rgba(25, 55, 109, 1) 100%
-    );
+    background: linear-gradient(0deg, rgba(30, 60, 114, 0.8) 0%, #2a5298 100%);
     padding: 24px 33px;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
   }
@@ -126,4 +125,3 @@
     z-index: 1;
   }
 }
-
