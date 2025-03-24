@@ -1,8 +1,7 @@
 @import "../../vars.css";
 
 .navbar {
-  position:sticky;
-  top :0%;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
