@@ -65,7 +65,7 @@
 }
 
 .heroImg {
-  width: 100%;
+  width: 70%;
   z-index: 1;
   animation: floating 3s infinite ease-in-out;
   filter: drop-shadow(0 0 20px rgba(0, 217, 255, 0.5));
