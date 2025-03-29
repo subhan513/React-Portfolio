@@ -48,10 +48,10 @@ export const Navbar = () => {
           onClick={() => setMenuOpen(false)}
         >
           {[
-            { id: "about", icon: "👨‍💻", label: "About" },
-            { id: "experience", icon: "💼", label: "Experience" },
-            { id: "projects", icon: "📁", label: "Projects" },
-            { id: "contact", icon: "📬", label: "Contact" },
+            { id: "about", icon: "", label: "About" },
+            { id: "experience", icon: "", label: "Experience" },
+            { id: "projects", icon: "", label: "Projects" },
+            { id: "contact", icon: "", label: "Contact" },
           ].map((item) => (
             <li key={item.id}>
               <a
