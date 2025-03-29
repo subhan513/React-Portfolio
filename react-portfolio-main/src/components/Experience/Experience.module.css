@@ -26,14 +26,14 @@
   width: 45%;
   display: flex;
   flex-wrap: wrap;
-  gap: 35px;
+  gap: 30px;
 }
 
 .skill {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 11px;
+  gap: 10px;
 }
 
 .skillImageContainer {
