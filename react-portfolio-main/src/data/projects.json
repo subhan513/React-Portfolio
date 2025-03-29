@@ -14,21 +14,5 @@
     "skills": ["Nextjs", "TailwindCSS", "VanillaJs"],
     "demo": "https://sharifeducaitonalcomplex.vercel.app/",
     "source": "https://github.com/subhan513/Sharif-Complex"
-  },
-  {
-    "title": "The Snake Quest",
-    "imageSrc": "projects/project4.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["html", "CSS", "JS"],
-    "demo": "https://snake-game-ebon-seven.vercel.app/",
-    "source": "https://github.com/subhan513/SnakeGame"
-  },
-  {
-    "title": "Event-Bubbler",
-    "imageSrc": "projects/project5.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["html", "Css", "Js"],
-    "demo": "http://event-bubbler.vercel.app/",
-    "source": "https://github.com/subhan513/EventBubbler"
   }
 ]
