@@ -6,19 +6,20 @@ export const ProjectCard = ({
   project: { title, imageSrc, description, skills, demo, source },
 }) => {
   return (
-    <div className={styles.container}>
+    <div className="projectSection">
+    <div className={styles.container} >
       <div className={styles.imageWrapper}>
         <img
           src={getImageUrl(imageSrc)}
           alt={`Image of ${title}`}
           className={styles.image}
         />
-        <div className={styles.overlay}> 
+        <div className={styles.overlay}>
           <a href={demo} target="_blank" rel="noopener noreferrer" className={styles.link}>
-            🚀 Live Demo
+             Live Demo
           </a>
           <a href={source} target="_blank" rel="noopener noreferrer" className={styles.link}>
-            💻 Source Code
+             Source Code
           </a>
         </div>
       </div>
@@ -31,6 +32,7 @@ export const ProjectCard = ({
           </li>
         ))}
       </ul>
+      </div>
     </div>
   );
-}
+};

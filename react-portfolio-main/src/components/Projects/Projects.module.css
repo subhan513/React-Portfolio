@@ -1,30 +1,22 @@
 @import "../../vars.css";
 
-.container {
-  margin-top: 50px;
-  color: var(--color-text);
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1200px;
-  padding: 0 20px;
-}
-
-.title {
-  font-size: 35px;
-  font-weight: 700;
-  font-family: 'Courier New', Courier, monospace;
-  
-  letter-spacing: 1.75px;
-  text-transform: uppercase;
+.projectsSection {
+  padding: 4rem 2rem;
+  background-color: #0f172a;
   text-align: center;
-  margin-bottom: 20px;
 }
 
-.projects {
-  margin-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  width: 100%;
+.heading {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: white;
 }
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  justify-items: center;
+}
+

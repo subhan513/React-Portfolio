@@ -3,12 +3,12 @@
     "title": "Real Time Movie Application",
     "imageSrc": "projects/project1.png",
     "description": "This is a full Stack project made to learn the latest languages by building an app.",
-    "skills": ["React","Appwrite","TailwindCSS"],
+    "skills": ["React", "Appwrite", "TailwindCSS"],
     "demo": "https://movie-application-git-main-subhan513s-projects.vercel.app/",
     "source": "https://github.com/subhan513/Movie-Application"
   },
   {
-    "title": "Our School  Mega Project",
+    "title": "Our School Mega Project",
     "imageSrc": "projects/project2.png",
     "description": "This is a project made to learn the latest languages by building an app.",
     "skills": ["Nextjs", "TailwindCSS", "VanillaJs"],

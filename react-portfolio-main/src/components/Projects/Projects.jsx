@@ -1,18 +1,16 @@
 import React from "react";
-
 import styles from "./Projects.module.css";
-
 import projects from "../../data/projects.json";
 import { ProjectCard } from "./ProjectCard";
 
 export const Projects = () => {
   return (
-    <section className={styles.container} id="projects">
-      <h2 className={styles.title}>Projects</h2>
-      <div className={styles.projects}>
-        {projects.map((project, id) => {
-          return <ProjectCard key={id} project={project} />;
-        })}
+    <section id="projects" className={styles.projectsSection}>
+      <h2 className={styles.heading}>My Projects</h2>
+      <div className={styles.projectsGrid}>
+        {projects.map((project, index) => (
+          <ProjectCard key={index} project={project} />
+        ))}
       </div>
     </section>
   );

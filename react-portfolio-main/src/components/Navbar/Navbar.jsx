@@ -6,36 +6,34 @@ export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("about");
 
-  // Throttle function to optimize scroll handling
-  const throttle = (func, delay) => {
-    let lastCall = 0;
-    return (...args) => {
-      const now = new Date().getTime();
-      if (now - lastCall >= delay) {
-        lastCall = now;
-        func(...args);
-      }
-    };
-  };
-
-  const handleScroll = () => {
-    const sections = ["about", "experience", "projects", "contact"];
-    for (let section of sections) {
-      const element = document.getElementById(section);
-      if (element) {
-        const rect = element.getBoundingClientRect();
-        if (rect.top <= 100 && rect.bottom >= 100) {
-          setActiveSection(section);
-          break;
-        }
-      }
-    }
-  };
-
   useEffect(() => {
-    const throttledScroll = throttle(handleScroll, 200); // runs every 200ms
-    window.addEventListener("scroll", throttledScroll);
-    return () => window.removeEventListener("scroll", throttledScroll);
+    const sections = ["about", "experience", "projects", "contact"];
+    const observers = [];
+
+    sections.forEach((section) => {
+      const element = document.getElementById(section);
+      if (!element) return;
+
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setActiveSection(section);
+          }
+        },
+        {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.6, // 60% visible
+        }
+      );
+
+      observer.observe(element);
+      observers.push(observer);
+    });
+
+    return () => {
+      observers.forEach((observer) => observer.disconnect());
+    };
   }, []);
 
   return (
