@@ -6,27 +6,43 @@ export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("about");
 
-  // Scroll effect to track section visibility
+  // Throttle function to optimize scroll handling
+  const throttle = (func, delay) => {
+    let lastCall = 0;
+    return (...args) => {
+      const now = new Date().getTime();
+      if (now - lastCall >= delay) {
+        lastCall = now;
+        func(...args);
+      }
+    };
+  };
+
   const handleScroll = () => {
     const sections = ["about", "experience", "projects", "contact"];
-    sections.forEach((section) => {
+    for (let section of sections) {
       const element = document.getElementById(section);
-      if (element && window.scrollY >= element.offsetTop - 100) {
-        setActiveSection(section);
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        if (rect.top <= 100 && rect.bottom >= 100) {
+          setActiveSection(section);
+          break;
+        }
       }
-    });
+    }
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const throttledScroll = throttle(handleScroll, 200); // runs every 200ms
+    window.addEventListener("scroll", throttledScroll);
+    return () => window.removeEventListener("scroll", throttledScroll);
   }, []);
 
   return (
     <nav className={styles.navbar}>
       {/* Logo and Title */}
       <a className={styles.title} href="/">
-       Subhan's Portfolio
+        Subhan's Portfolio
       </a>
 
       {/* Menu Button for Mobile */}
