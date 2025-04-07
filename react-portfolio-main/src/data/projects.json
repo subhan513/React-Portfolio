@@ -11,8 +11,24 @@
     "title": "Our School Mega Project",
     "imageSrc": "projects/project2.png",
     "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["Nextjs", "TailwindCSS", "VanillaJs"],
+    "skills": ["Reactjs", "TailwindCSS", "VanillaJs"],
     "demo": "https://sharifeducaitonalcomplex.vercel.app/",
     "source": "https://github.com/subhan513/Sharif-Complex"
+  },
+  {
+    "title": "iTask Todo App",
+    "imageSrc": "projects/Todo.png",
+    "description": "This is a project made to learn the latest languages by building an app.",
+    "skills": ["React", "TailwindCSS", "VanillaJs"],
+    "demo": "https://todo-app-lovat-phi-90.vercel.app/",
+    "source": "https://github.com/subhan513/TodoApp"
+  },
+  {
+    "title": "Our Weather App",
+    "imageSrc": "projects/Weather.png",
+    "description": "This is a project made to learn the latest languages by building an app.",
+    "skills": ["html", "CSS", "VanillaJs"],
+    "demo": "https://weather-app-ten-lake-13.vercel.app/",
+    "source": "https://github.com/subhan513/WeatherApp"
   }
 ]
