@@ -24,7 +24,7 @@
     "source": "https://github.com/subhan513/TodoApp"
   },
   {
-    "title": "Our Weather App",
+    "title": "Our Weather App By Using API",
     "imageSrc": "projects/Weather.png",
     "description": "This is a project made to learn the latest languages by building an app.",
     "skills": ["html", "CSS", "VanillaJs"],
